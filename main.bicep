@@ -13,8 +13,8 @@ var tags = {
 }
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
-  name: storageAccountName
-  location: location
+  name: storageAccounttest3
+  location: CentralUS
   tags: tags
   sku: {
     name: 'Standard_LRS'
@@ -22,7 +22,6 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   kind: 'StorageV2'
   properties: {
     accessTier: 'Hot'
-    allowBlobPublicAccess: false
     minimumTlsVersion: 'TLS1_2'
   }
 }
